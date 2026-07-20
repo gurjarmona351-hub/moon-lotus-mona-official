@@ -65,6 +65,24 @@ backdrop-filter:blur(10px);
 }
 
 .card{.moon{
+font-size:90px;
+position:absolute;
+top:40px;
+right:80px;
+animation: moonMove 2s infinite alternate;
+}
+
+@keyframes moonMove{
+from{
+transform:scale(1);
+filter:drop-shadow(0 0 10px white);
+}
+
+to{
+transform:scale(1.1);
+filter:drop-shadow(0 0 50px pink);
+}
+}.moon{
 ...
 }
 @keyframes glow{
