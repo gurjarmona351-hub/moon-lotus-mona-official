@@ -64,7 +64,29 @@ border-radius:20px;
 backdrop-filter:blur(10px);
 }
 
-.card{
+.card{.moon{
+...
+}
+@keyframes glow{
+...
+}
+.moon{
+font-size:90px;
+position:absolute;
+top:40px;
+right:80px;
+animation: moonGlow 2s infinite alternate;
+}
+
+@keyframes moonGlow{
+from{
+filter:drop-shadow(0 0 10px white);
+}
+
+to{
+filter:drop-shadow(0 0 35px pink);
+}
+}      
 
 .stars{
 position:fixed;
