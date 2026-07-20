@@ -13,6 +13,9 @@ box-sizing:border-box;
 }
 
 body{
+ 
+<div class="stars"></div>
+<div class="moon">🌙</div>
 font-family:Arial, sans-serif;
 background:linear-gradient(135deg,#14002d,#2c0057,#5a189a);
 color:white;
@@ -61,7 +64,42 @@ border-radius:20px;
 backdrop-filter:blur(10px);
 }
 
-.card{
+.card{.moon{
+font-size:90px;
+position:absolute;
+top:40px;
+right:80px;
+animation: glow 2s infinite alternate;
+}
+
+@keyframes glow{
+from{
+text-shadow:0 0 10px white;
+}
+to{
+text-shadow:0 0 40px pink;
+}
+}
+
+.stars{
+position:fixed;
+width:100%;
+height:100%;
+background-image:radial-gradient(white 1px, transparent 1px);
+background-size:50px 50px;
+animation: moveStars 10s linear infinite;
+opacity:.5;
+pointer-events:none;
+}
+
+@keyframes moveStars{
+from{
+transform:translateY(0);
+}
+to{
+transform:translateY(50px);
+}
+}
 background:rgba(255,255,255,.1);
 padding:20px;
 margin:20px;
